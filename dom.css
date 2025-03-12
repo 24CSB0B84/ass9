@@ -1,0 +1,297 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+}
+
+.header {
+    background-image: url('https://pbs.twimg.com/media/FLicViFaMAE1U7D.jpg:large');
+    background-size: cover;
+    text-align: center;
+    color: white;
+    padding: 50px 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+#products {
+    background-color: palevioletred;
+    padding: 20px;
+}
+
+#cart {
+    background-color: #e2e2e2;
+    padding: 20px;
+    border-top: 2px solid #ddd;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.header a:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 3 items per row */
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    border: 1px solid #ddd;
+    background-color: aliceblue;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.product img {
+    width: 80%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.product h3 {
+    font-size: 1.2em;
+}
+
+.product p {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.product button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.product button:hover {
+    background-color: #218838;
+}
+
+/* Hover Effect for Products */
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.cart {
+    background-color: pink;
+    padding: 20px;
+    border-top: 2px solid #ddd;
+}
+
+.cart h2 {
+    text-align: center;
+}
+
+.cart p {
+    font-size: 1.2em;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark-mode .header {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+body.dark-mode .header a {
+    color: #eaeaea;
+}
+
+body.dark-mode .products {
+    background-color: #333;
+}
+
+body.dark-mode .cart {
+    background-color: #222;
+    color: white;
+}
+
+body.dark-mode .product {
+    background-color: #444;
+    color: white;
+    border: 1px solid #555;
+}
+
+body.dark-mode .product button {
+    background-color: #28a745;
+    color: white;
+}
+
+body.dark-mode .product button:hover {
+    background-color: #218838;
+}
+
+/* Gallery container */
+#gallery {
+    margin: 20px;
+    text-align: center;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery-item {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+.gallery-item:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Lightbox (large image view) */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    border: 10px solid white;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.close-lightbox:hover {
+    color: #f00;
+}
+/* Additional styles for table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+button {
+    padding: 5px 10px;
+    margin: 5px;
+}
+
+input[type="text"], input[type="number"] {
+    padding: 5px;
+    margin: 5px;
+}
+/* Timer Section Styling */
+#timer-section {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#timer-section input,
+#timer-section button {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#timer-section input[type="number"] {
+    width: 150px;
+    text-align: center;
+}
+
+#timer-section button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#timer-section button:hover {
+    background-color: #45a049;
+}
+
+#timer-section button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#timer-display {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    margin: 20px auto;
+    background-color: #eee;
+    color: #333;
+}
+
+#timer-display.green {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#timer-display.yellow {
+    background-color: #FFEB3B;
+    color: black;
+}
+
+#timer-display.red {
+    background-color: #F44336;
+    color: white;
+}
+
+

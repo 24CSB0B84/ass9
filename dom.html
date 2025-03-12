@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dom.css">
+    <title>Product Catalog</title>
+</head>
+<body>
+
+    <section class="header">
+        <h1>Product Catalog</h1>
+        <a href="#products">Start Shopping</a> 
+        <a href="#cart">Show Cart</a>
+        <button id="theme-toggle">Switch to Dark Mode</button> <!-- Theme toggle button -->
+    </section>
+    
+
+    <section id="products" class="products"></section>
+
+    <section id="cart" class="cart">
+        <h2>Shopping Cart</h2>
+        <div id="cart-items"></div>
+        <p>Total: $<span id="cart-total">0</span></p>
+        <p id="cart-date"></p>
+    </section>
+
+    <section id="timer-section">
+        <input type="number" id="countdown-input" placeholder="Enter seconds">
+        <button id="start-timer">Start Timer</button>
+        <button id="pause-timer">Pause</button>
+        <button id="reset-timer">Reset</button>
+        <div id="timer-display">0</div>
+    </section>
+
+    <section id="gallery">
+        <h2>Win An exciting prize</h2>
+        <div class="gallery-container">
+            <img class="gallery-item" src="https://wallpapers.com/images/featured/4k-car-g6a4f0e15hkua5oa.jpg" alt="Image 1" data-large="https://wallpapers.com/images/featured/4k-car-g6a4f0e15hkua5oa.jpg">
+            <img class="gallery-item" src="https://apexgamingpcs.com/cdn/shop/articles/4K-vs-1080p-for-Gaming_1600x.jpg?v=1633718118" alt="Image 2" data-large="https://apexgamingpcs.com/cdn/shop/articles/4K-vs-1080p-for-Gaming_1600x.jpg?v=1633718118">
+            <img class="gallery-item" src="https://images.wsj.net/im-926380?width=1280&size=1" alt="Image 3" data-large="https://images.wsj.net/im-926380?width=1280&size=1">
+        </div>
+        <div id="lightbox" class="lightbox">
+            <span id="close-lightbox" class="close-lightbox">&times;</span>
+            <img id="lightbox-image" src="" alt="Large Image">
+        </div>
+    </section>
+    <section>
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Cost</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <input type="text" id="name-input" placeholder="Enter Name">
+        <input type="number" id="age-input" placeholder="Enter Cost">
+        <button id="add-row">Add Row</button>
+    </section>
+
+    <script src="dom.js"></script>
+</body>
+</html>
